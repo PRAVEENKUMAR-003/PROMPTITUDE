@@ -1,0 +1,30 @@
+{% extends "nav.html" %}
+{% block content %}
+<style>.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.container:hover {
+    background-color: #f2f2f2;
+}
+
+h4 {
+    text-align: center;
+}
+i {
+    margin-top: 20px;
+}</style>
+<div class="container">
+    <h4>Drop your Image file Here <i class='bx bx-chevrons-down bx-fade-up'></i></h4>
+</div>
+{{ dropzone.create(action='upload') }}
+{{ dropzone.load_js() }}
+{{ dropzone.config() }}
+
+{% endblock %}

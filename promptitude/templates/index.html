@@ -1,0 +1,92 @@
+{% extends "nav.html" %}
+{% block content %}
+<style>.container {
+    
+    margin-left: 1%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    flex: 1;
+    padding: 20px;
+}
+
+.center img {
+    max-width: 400%;
+    border-radius: 5px;
+    height: auto;
+}
+
+.select {
+    flex: 1;
+    text-align: center;
+    background-color: #ffffff90;
+    border-radius: 5px;
+}
+
+.heading {
+    margin-top: 3%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+
+.select-option i{
+    margin-left: 4%;
+}
+.select-option {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #a0edea;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #000000;
+    background-color: #ffffffbf;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.select-option:hover {
+    background-color: #a9e7f8;
+    color: #000000;
+    text-decoration: none;
+}</style>
+<div class="container">
+        <div class="content">
+            <div class="center">
+                <img src="https://i0.wp.com/www.dubaitranslationoffice.com/wp-content/uploads/2023/08/How-to-Find-the-Best-Prices-for-Translation-A-Comprehensive-Guide.webp?fit=1400%2C800&ssl=1" alt="Promptitude">
+                
+            </div>
+            <div class="select">
+                <h3 class="heading">
+                    Prompt to 
+                </h3>
+                <div class="heading">
+                    <a href="{{ url_for('decoded') }}" class="select-option">Translate Text<i class="uil uil-english-to-chinese"></i></a>
+                    <a href="{{ url_for('upload') }}" class="select-option">Translate Image To Text<i class="uil uil-image-question"></i></a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        .audio-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 1000px; /* You can adjust the maximum width as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-container">
+        <audio controls autoplay class="m-auto">
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="{{ url_for('static', filename='audio_files/' + file) }}" type="audio/mpeg">
+            Your browser does not support the audio.
+        </audio>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}

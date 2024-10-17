@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+        <title>Promptitude-{{ title }}</title>
+    {% else %}
+        <title>Promptitudde</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!----box icons amd unicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- dropzone -->
+    {{ dropzone.load_css() }}
+    {{ dropzone.style('border: 2px dashed #0087F7; margin: 1% -50% 1% -50% ; min-height: 400px;') }}
+
+</head>
+<body>
+<style>body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  font-style: bold;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-logo img {
+  max-height: 100%; 
+  vertical-align: middle;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navbar-menu a{
+  color: #060606;
+  text-decoration: none;
+}
+.navbar-menu li {
+  margin: 0 10px;
+  position: relative;
+  color: #060606;
+  font-size: 20px;
+}
+
+.navbar-menu li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+}
+
+
+
+.navbar-menu a:hover {
+  color: #0fc10c; 
+}</style>
+    <header>
+      <nav>
+        <div class="navbar">
+            <div class="logo-container">
+                <a href="#" class="navbar-logo"><img src="https://dynamic.brandcrowd.com/asset/logo/e841db60-f209-4013-aa1d-005f56b5853f/logo-search-grid-2x?logoTemplateVersion=2&v=638219500328070000&text=Promptitude&layout=landscape&colorpalette=grayscale" alt="Logo"></a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+          
+            </ul>
+          </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+  <!-- sweetalerts -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
